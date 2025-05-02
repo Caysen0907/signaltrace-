@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SignalTrace</title>
+  <style>
+    body {
+      background: black;
+      color: #00ffcc;
+      font-family: monospace;
+      overflow: hidden;
+      margin: 0;
+    }
+    #console {
+      white-space: pre;
+      padding: 20px;
+      max-width: 100vw;
+      max-height: 100vh;
+      overflow-y: scroll;
+    }
+    .glitch {
+      animation: glitch 1s infinite;
+    }
+    @keyframes glitch {
+      0% { transform: translate(0); }
+      25% { transform: translate(1px, -1px); }
+      50% { transform: translate(-1px, 1px); }
+      75% { transform: translate(1px, 1px); }
+      100% { transform: translate(0); }
+    }
+  </style>
+</head>
+<body>
+  <div id="console" class="glitch">
+    > SIGNALTRACE v0.1 INITIALIZED<br>
+    > Listening on band 134.7Hz...<br>
+    > Type 'trace()' to begin.<br>
+  </div>
+  <script src="scripts/glitch.js"></script>
+  <script src="scripts/ping.js"></script>
+</body>
+</html>
